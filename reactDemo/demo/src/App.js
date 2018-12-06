@@ -15,19 +15,26 @@ class App extends Component {
     })
   }
   mouseMove(e){
-    const boxWidth = 631.58
-    const boxHeight = 315.79
-    // const thisPX = this.refs.bgBox.offsetTop
-    const thisPX = 100
-    const thisPY = this.refs.bgBox.offsetLeft 
-    const pageX = e.pageX - thisPX    
-    const pageY = e.pageY - thisPY
+    // 目标元素宽高 
+    const boxWidth = this.refs.bgBox.offsetWidth
+    const boxHeight = this.refs.bgBox.offsetHeight
+    // 元素距离浏览器边缘距离
 
+    const thisPX = this.refs.bgBox.offsetTop
+    console.log('thisPX',thisPX)
+    const thisPY = this.refs.bgBox.offsetLeft 
+    console.log('thisPY',thisPY)
+    // 计算鼠标在目标元素内的横纵坐标值 
+    const pageX = e.pageX - thisPX 
+    console.log('pageX',pageX)   
+    const pageY = e.pageY - thisPY
+    console.log('pageY',pageY)
+    // 最终偏移角度 
     const X = (pageX - boxWidth/2)/50
     const Y = (boxHeight/2 - pageY)/50
 
     console.log('offsettop',thisPX,thisPY)
-    let degs=`rotateX(${X}deg) rotateY(${Y}deg)`
+    let degs=`rotateX(${Y}deg) rotateY(${X}deg)`
     this.setState({
       degs: degs
     })

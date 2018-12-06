@@ -11,13 +11,15 @@
     /* 透视图,用来产生透视效果 */
     /* perspective属性固名思义就是透视的意思；该属性可以定义3D视觉的角度，让底下子元素使用3D特效时能够完整显示。 */
     perspective: 800px;
+    /* width: 800px; */
+    /* margin: 0 auto; */
   }
   
   .bg {
     position: relative;
     width: 600px;
     height: 300px;
-    margin: 100px auto;
+    /* margin: 100px auto; */
     background: url("http://static.smartisanos.cn/index/img/store/home/banner-3d-item-1-box-1_61bdc2f4f9.png") center no-repeat;
     background-size:100% 100%;
     border-radius: 10px;
