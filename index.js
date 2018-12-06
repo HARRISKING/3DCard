@@ -1,4 +1,5 @@
 $(function() {
+    // mouseenter鼠标移入
     $(".bg").mouseenter(function() {
       var thisPX = $(this).offset().left;
       var thisPY = $(this).offset().top;
